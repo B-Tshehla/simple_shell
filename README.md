@@ -33,7 +33,7 @@
 * `wait4` (man 2 wait4)
 * `write` (man 2 write)
 
-## Checks 
+## Check 
 The Checker will be released at the end of the project (1-2 days before the deadline). We strongly encourage the entire class to work together to create a suite of checks covering both regular tests and edge cases for each task. See `task 8. Test suite.`
 
 ## Tasks
