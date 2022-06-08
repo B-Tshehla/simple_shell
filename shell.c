@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 
 /**
  * execute - executes the command
@@ -32,7 +32,7 @@ int execute(char **cmd)
 	}
 	else
     {
-		wait(&status);
+		wait(&stat);
     }
 	return (0);
 }
