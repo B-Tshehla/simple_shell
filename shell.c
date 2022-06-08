@@ -50,7 +50,7 @@ int main(int argc, char **argv)
 
 	int response;
 	char **tokens;
-	size_t bufferSize = BUFFERSIZE;
+	size_t bufferSize = 1024;
 	int pipe = 0;
 	char *buffer;
 
