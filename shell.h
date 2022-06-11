@@ -11,6 +11,36 @@
 #include <errno.h>
 #include <stdio.h>
 
+#define END_OF_FILE -2
+#define EXIT -3
+
+extern char **environ;
+char *name;
+int hist;
+
+/**
+ * struct list_s - A new struct type defining a linked list.
+ * @dir: A directory path.
+ * @next: A pointer to the next element list_s.
+ */
+typedef struct list_s
+{
+	char *dir;
+	struct list_s *next;
+} list_t;
+
+**
+ * struct builtin_s - A new struct type defining builtin commands.
+ * @name: The name of the builtin command.
+ * @f: A function pointer to the builtin command's function.
+ */
+typedef struct builtin_s
+{
+	char *name;
+	int (*f)(char **argv, char **front);
+} builtin_t;
+
+/*printer prototype*/
 int _putchar(char c);
 
 /* string manipulation prototypes*/
@@ -37,6 +67,15 @@ int shellby_cd(char **args, char __attribute__((__unused__)) **front);
 int shellby_alias(char **args, char __attribute__((__unused__)) **front);
 int shellby_help(char **args, char __attribute__((__unused__)) **front);
 
-
+/*builtin helper prototypes*/
+void help_all(void);
+void help_alias(void);
+void help_cd(void);
+void help_exit(void);
+void help_help(void);
+void help_env(void);
+void help_setenv(void);
+void help_unsetenv(void);
+void help_history(void);
 
 #endif
