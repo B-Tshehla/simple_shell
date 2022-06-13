@@ -40,6 +40,14 @@ typedef struct builtin_s
 	int (*f)(char **argv, char **front);
 } builtin_t;
 
+
+/*linked list prototypes*/
+
+alias_t *add_alias_end(alias_t **head, char *name, char *value);
+void free_alias_list(alias_t *head);
+list_t *add_node_end(list_t **head, char *dir);
+void free_list(list_t *head);
+
 /*printer prototype*/
 int _putchar(char c);
 
