@@ -67,6 +67,10 @@ int shellby_cd(char **args, char __attribute__((__unused__)) **front);
 int shellby_alias(char **args, char __attribute__((__unused__)) **front);
 int shellby_help(char **args, char __attribute__((__unused__)) **front);
 
+int shellby_env(char **args, char __attribute__((__unused__)) **front);
+int shellby_setenv(char **args, char __attribute__((__unused__)) **front);
+int shellby_unsetenv(char **args, char __attribute__((__unused__)) **front);
+
 /*builtin helper prototypes*/
 void help_all(void);
 void help_alias(void);
@@ -77,5 +81,11 @@ void help_env(void);
 void help_setenv(void);
 void help_unsetenv(void);
 void help_history(void);
+
+/* envoroment*/
+
+char **_copyenv(void);
+void free_env(void);
+char **_getenv(const char *var);
 
 #endif
