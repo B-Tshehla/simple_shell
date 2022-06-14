@@ -96,4 +96,14 @@ char **_copyenv(void);
 void free_env(void);
 char **_getenv(const char *var);
 
+/*betty helpers*/
+
+void free_args(char **args, char **front);
+char *get_pid(void);
+char *get_env_value(char *beginning, int len);
+void variable_replacement(char **args, int *exe_ret);
+void handle_line(char **line, ssize_t read);
+ssize_t get_new_len(char *line);
+void logical_ops(char *line, ssize_t *new_len);
+
 #endif
