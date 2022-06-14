@@ -91,13 +91,11 @@ void help_unsetenv(void);
 void help_history(void);
 
 /* envoroment*/
-
 char **_copyenv(void);
 void free_env(void);
 char **_getenv(const char *var);
 
 /*betty helpers*/
-
 void free_args(char **args, char **front);
 char *get_pid(void);
 char *get_env_value(char *beginning, int len);
@@ -105,5 +103,14 @@ void variable_replacement(char **args, int *exe_ret);
 void handle_line(char **line, ssize_t read);
 ssize_t get_new_len(char *line);
 void logical_ops(char *line, ssize_t *new_len);
+
+/* input helpers*/
+char *get_args(char *line, int *exe_ret);
+int call_args(char **args, char **front, int *exe_ret);
+int run_args(char **args, char **front, int *exe_ret);
+int handle_args(int *exe_ret);
+int check_args(char **args);
+
+
 
 #endif
