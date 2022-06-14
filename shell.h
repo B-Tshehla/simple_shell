@@ -29,7 +29,7 @@ typedef struct list_s
 	struct list_s *next;
 } list_t;
 
-**
+/**
  * struct builtin_s - A new struct type defining builtin commands.
  * @name: The name of the builtin command.
  * @f: A function pointer to the builtin command's function.
